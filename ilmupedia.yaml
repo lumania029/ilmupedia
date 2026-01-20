@@ -69,13 +69,4 @@ proxy-groups:
       - REJECT 
 
 rules:
- - RULE-SET,Block,IKLAN
- - RULE-SET,Game,GAME
- - RULE-SET,Umum,AKUN
- - RULE-SET,indo,AKUN
- - RULE-SET,Sosmed,AKUN
- - RULE-SET,Streaming,AKUN
- - RULE-SET,Tiktok,AKUN
- - RULE-SET,Meta,AKUN
- - RULE-SET,PortGame,GAME
  - MATCH,INDO 1
