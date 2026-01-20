@@ -53,12 +53,10 @@ proxy-groups:
     type: select
     proxies:
       - INDO 1
-      - DIRECT
 
   - name: IKLAN
     type: select
     proxies:
-      - AKUN
       - REJECT
 
   - name: GAME
@@ -66,7 +64,6 @@ proxy-groups:
     proxies:
       - AKUN
       - DIRECT
-      - REJECT 
 
 rules:
  - MATCH,INDO 1
