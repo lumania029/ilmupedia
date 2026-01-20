@@ -48,11 +48,45 @@ proxies:
       headers:
         Host: ""
     udp: true
+  - name: INDO 2
+    server: samudra.basecampsedekahbumi.my.id
+    port: 443
+    type: vmess
+    uuid: c69b02eb-5695-4cb2-8dca-976ee35c6d58
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: ""
+    udp: true
+  - name: INDO 3
+    server: samudra.basecampsedekahbumi.my.id
+    port: 443
+    type: vmess
+    uuid: c69b02eb-5695-4cb2-8dca-976ee35c6d58
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ""
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: ""
+    udp: true
 proxy-groups:
   - name: AKUN
     type: select
     proxies:
       - INDO 1
+      - INDO 2
+      - INDO 3
 
   - name: IKLAN
     type: select
