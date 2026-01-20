@@ -100,4 +100,47 @@ proxy-groups:
       - DIRECT
 
 rules:
+ - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+ - RULE-SET,Block,IKLAN
+ - RULE-SET,Game,GAME
+ - RULE-SET,Umum,AKUN
+ - RULE-SET,Sosmed,AKUN
+ - RULE-SET,Streaming,AKUN
+ - RULE-SET,Tiktok,AKUN
+ - RULE-SET,Meta,AKUN
+ - RULE-SET,PortGame,GAME
  - MATCH,INDO 1
+
+rule-providers:
+  Game:
+    type: file
+    behavior: classical
+    path: ./game.yaml 
+  PortGame:
+    type: file
+    behavior: classical
+    path: ./portgame.yaml
+  Umum:
+    type: file
+    behavior: classical
+    path: ./umum.yaml 
+  Sosmed:
+    type: file
+    behavior: classical
+    path: ./sosmed.yaml
+  Streaming:
+    type: file
+    behavior: classical
+    path: ./streaming.yaml
+  Tiktok:
+    type: file
+    behavior: domain
+    path: ./tiktok.yaml
+  Meta:
+    type: file
+    behavior: domain
+    path: ./meta.yaml
+  Block:
+    type: file
+    behavior: domain
+    path: ./block.yaml
