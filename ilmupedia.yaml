@@ -103,6 +103,7 @@ proxy-groups:
       - INDO 1
       - INDO 2
       - INDO 3
+      - SINGAPORE
 
   - name: IKLAN
     type: select
