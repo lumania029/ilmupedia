@@ -32,39 +32,7 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: INDO 1
-    server: 104.18.2.2
-    port: 443
-    type: vmess
-    uuid: c69b02eb-5695-4cb2-8dca-976ee35c6d58
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: "samudra.basecampsedekahbumi.my.id"
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: "samudra.basecampsedekahbumi.my.id"
-    udp: true
-  - name: INDO 2
-    server: 104.18.2.2
-    port: 443
-    type: vmess
-    uuid: c69b02eb-5695-4cb2-8dca-976ee35c6d58
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: "samudra.basecampsedekahbumi.my.id"
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: "samudra.basecampsedekahbumi.my.id"
-    udp: true
-  - name: INDO 3
+  - name: INDO
     server: 104.18.2.2
     port: 443
     type: vmess
@@ -100,9 +68,7 @@ proxy-groups:
   - name: AKUN
     type: select
     proxies:
-      - INDO 1
-      - INDO 2
-      - INDO 3
+      - INDO
       - SINGAPORE
 
   - name: IKLAN
